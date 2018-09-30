@@ -1,5 +1,7 @@
 package com.designpatterns.adapter;
 
+import java.util.Arrays;
+
 public class testAdapter {
 
 	public static void main(String[] args) {
@@ -9,6 +11,7 @@ public class testAdapter {
 		
 		adapter.chargeAndroid();
 		adapter.chargeUp();
+		
 	}
 
 }
