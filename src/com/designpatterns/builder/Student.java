@@ -93,6 +93,14 @@ public class Student {
 		this.passportNo = builder.passportNo;
 		this.studentId = studentId;
 	}
+	
+
+	@Override
+	public String toString() {
+		return "Student [studentId=" + studentId + ", name=" + name + ", email=" + email + ", dob=" + dob
+				+ ", passportNo=" + passportNo + ", aadharNo=" + aadharNo + ", panNo=" + panNo + "]";
+	}
+
 
 	static class StudentBuilder {
 
@@ -109,63 +117,32 @@ public class Student {
 			this.email = email;
 		}
 
-		public int getStudentId() {
-			return studentId;
-		}
-
-		public void setStudentId(int studentId) {
+		public StudentBuilder setStudentId(int studentId) {
 			this.studentId = studentId;
+			return this;
 		}
 
-		public String getName() {
-			return name;
-		}
-
-		public void setName(String name) {
-			this.name = name;
-		}
-
-		public String getEmail() {
-			return email;
-		}
-
-		public void setEmail(String email) {
-			this.email = email;
-		}
-
-		public LocalDate getDob() {
-			return dob;
-		}
-
-		public void setDob(LocalDate dob) {
+		public StudentBuilder setDob(LocalDate dob) {
 			this.dob = dob;
+			return this;
 		}
 
-		public String getPassportNo() {
-			return passportNo;
-		}
-
-		public void setPassportNo(String passportNo) {
+		public StudentBuilder setPassportNo(String passportNo) {
 			this.passportNo = passportNo;
+			return this;
 		}
 
-		public String getAadharNo() {
-			return aadharNo;
-		}
-
-		public void setAadharNo(String aadharNo) {
+		public StudentBuilder setAadharNo(String aadharNo) {
 			this.aadharNo = aadharNo;
+			return this;
 		}
 
-		public String getPanNo() {
-			return panNo;
-		}
-
-		public void setPanNo(String panNo) {
+		public StudentBuilder setPanNo(String panNo) {
 			this.panNo = panNo;
+			return this;
 		}
 
-		public static Student build() {
+		public Student build() {
 			return new Student(this);
 		}
 
