@@ -1,8 +1,5 @@
 package com.designpatterns.singleton;
 
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
-
 public class ConfigurationDetails {
 
 	private static volatile ConfigurationDetails instance;

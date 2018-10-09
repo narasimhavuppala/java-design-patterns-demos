@@ -10,7 +10,7 @@ public class TestObservable {
 		
 		socks.addObserver(usr1);
 		socks.addObserver(new User2());
-		socks.deleteObserver(usr1);
+	//	socks.deleteObserver(usr1);
 		
 		socks.setSocks(15);
 	}
