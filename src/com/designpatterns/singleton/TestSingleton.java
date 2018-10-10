@@ -9,16 +9,23 @@ public class TestSingleton {
 
 		Runnable r = () -> {
 			try {
-				System.out.println(ConfigurationDetails.getConfigurationDetails());
+				ConfigurationDetails config = ConfigurationDetails.getConfigurationDetails();
+			System.out.println(config);
+			try {
+				System.out.println(config.clone());
+			} catch (CloneNotSupportedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		};
-		
-		ExecutorService threadPool=Executors.newFixedThreadPool(30);
 
-		for (int i = 0; i < 30; i++) {
+		ExecutorService threadPool = Executors.newFixedThreadPool(30);
+
+		for (int i = 0; i < 2; i++) {
 			Thread.sleep(5);
 			threadPool.submit(r);
 		}

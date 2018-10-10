@@ -6,7 +6,7 @@ public class TestFactory {
 
 	public static void main(String[] args) {
 
-		DataSource connection = DatabaseConnectionFactory.getDbConnection(DatabaseType.MSSQL);
+		DataSource connection = DatabaseConnectionFactory.getDbConnection(DatabaseType.ORACLE);
 		
 
 	}

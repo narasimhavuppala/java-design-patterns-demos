@@ -23,10 +23,10 @@ public class Student {
 
 	}
 
-	public Student(String studentName, String studentEmail, LocalDate dob) {
+	/*public Student(String studentName, String studentEmail, LocalDate dob) {
 		this(studentName, studentEmail);
 		this.dob = dob;
-	}
+	}*/
 
 	public int getStudentId() {
 		return studentId;
@@ -131,21 +131,17 @@ public class Student {
 			this.passportNo = passportNo;
 			return this;
 		}
-
 		public StudentBuilder setAadharNo(String aadharNo) {
 			this.aadharNo = aadharNo;
 			return this;
 		}
-
 		public StudentBuilder setPanNo(String panNo) {
 			this.panNo = panNo;
 			return this;
 		}
-
 		public Student build() {
 			return new Student(this);
 		}
-
 	}
 
 	// Come up with Streotypic constructors
